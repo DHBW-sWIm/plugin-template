@@ -17,14 +17,14 @@ class simplehtml_form extends moodleform {
 		$mform->setType('name', PARAM_NOTAGS);
         $mform->setDefault('name', 'Bitte Namen eingeben');
 
-        error_log("TEST FROM INSIDE FORM");
+        // error_log("TEST FROM INSIDE FORM");
         
         $mform->addElement('hidden', 'id');
         $mform->setType('id', PARAM_INT);
 
         $mform->addElement('submit', 'btnSubmit', 'Absenden und Prozess starten');
 
-        error_log("TEST FROM AFTER SUBMIT IN FORM");
+        // error_log("TEST FROM AFTER SUBMIT IN FORM");
 
     }
     //Custom validation should be added here

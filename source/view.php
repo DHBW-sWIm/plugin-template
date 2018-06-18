@@ -86,13 +86,12 @@ require_once(dirname(__FILE__).'/forms/simpleform.php');
 $mform = new simplehtml_form();
 // $mform->render();
 
-error_log("TEST FROM BEFORE DISPLAY");
+// error_log("TEST FROM BEFORE DISPLAY");
 
 //Form processing and displaying is done here
 if ($mform->is_cancelled()) {
     //Handle form cancel operation, if cancel button is present on form
 } else if ($fromform = $mform->get_data()) {
-    error_log("TEST FROM DIRECTLY AFTER SUBMIT");
     $value1 = $fromform->email;
     $value2 = $fromform->name;
 
