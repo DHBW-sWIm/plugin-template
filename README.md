@@ -33,12 +33,12 @@ For the sake of this tutorial, it is assumed that you have a shell (or cmd on Wi
 
 * Edit all the files in this directory and its subdirectories and change
   all the instances of the string "newmodule" to your module name
-  (eg "widget"). If you are using Linux, you can use the following command:
-  `$ find . -type f -exec sed -i 's/newmodule/widget/g' {} \;`
+  (eg "widget"). If you are using Linux, you can use the following command:  
+  `$ find . -type f -exec sed -i 's/newmodule/widget/g' {} \;`  
   `$ find . -type f -exec sed -i 's/NEWMODULE/WIDGET/g' {} \;`
 
-  On a mac, use:
-  `$ find . -type f -exec sed -i '' 's/newmodule/widget/g' {} \;`
+  On a mac, use:  
+  `$ find . -type f -exec sed -i '' 's/newmodule/widget/g' {} \;`  
   `$ find . -type f -exec sed -i '' 's/NEWMODULE/WIDGET/g' {} \;`
 
 * Rename the file lang/en/newmodule.php to lang/en/widget.php
@@ -47,7 +47,7 @@ For the sake of this tutorial, it is assumed that you have a shell (or cmd on Wi
 * Rename all files in backup/moodle2/ folder by replacing "newmodule" with
   the name of your module
 
-  On Linux you can perform this and previous steps by calling:
+  On Linux you can perform this and previous steps by calling:  
   `$ find . -depth -name '*newmodule*' -execdir bash -c 'mv -i "$1" "${1//newmodule/widget}"' bash {} \;`
 
 * Move the folder `/vendor`, which was created by composer, in the folder `/source`, overwriting any existing files if asked.
