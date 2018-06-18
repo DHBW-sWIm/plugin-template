@@ -2,6 +2,16 @@
 
 [![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
+<!-- TOC -->
+
+- [Moodle Plugin Template](#moodle-plugin-template)
+	- [Autofix of all linter Errors](#autofix-of-all-linter-errors)
+	- [Moodle Instances](#moodle-instances)
+	- [Official Moodle Docs With Additional Comments](#official-moodle-docs-with-additional-comments)
+	- [Local testing](#local-testing)
+
+<!-- /TOC -->
+
 ## Autofix of all linter Errors
 
 1. Install [Composer](https://getcomposer.org/doc/00-intro.md)
@@ -89,3 +99,7 @@ For the sake of this tutorial, it is assumed that you have a shell (or cmd on Wi
 We encourage you to share your code and experience - visit [http://moodle.org](http://moodle.org)
 
 Good luck, you will need it...
+
+## Local testing
+
+You can test the PHP code you have written locally on your system against the Activiti API. My attempts for this can be found in the file `bla.php` in the root directory of this repo. Keep in mind that you do not have access to any Moodle API while testing on your local system.
