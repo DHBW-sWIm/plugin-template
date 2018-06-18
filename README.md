@@ -31,6 +31,8 @@ For the sake of this tutorial, it is assumed that you have a shell (or cmd on Wi
   your name is not already used by an other module. Registering the plugin
   name @ [http://moodle.org/plugins](http://moodle.org/plugins) will secure it for you.
 
+  * Keep in mind Moodle does not like numbers or special characters like `.` or `,` in names or paths. Name your plugin accordingly.
+
 * Edit all the files in this directory and its subdirectories and change
   all the instances of the string "newmodule" to your module name
   (eg "widget"). If you are using Linux, you can use the following command:  
