@@ -5,12 +5,15 @@
 <!-- TOC -->
 
 - [Moodle Plugin Template](#moodle-plugin-template)
+		- [IF IN DOUBT, READ THE DOCS!](#if-in-doubt-read-the-docs)
 	- [Autofix of all linter Errors](#autofix-of-all-linter-errors)
 	- [Moodle Instances](#moodle-instances)
 	- [Official Moodle Docs With Additional Comments](#official-moodle-docs-with-additional-comments)
 	- [Local testing](#local-testing)
 
 <!-- /TOC -->
+
+### IF IN DOUBT, READ THE DOCS!
 
 ## Autofix of all linter Errors
 
