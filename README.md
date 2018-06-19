@@ -40,6 +40,8 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
 
 * Clone the repository and read this file
 
+* Install composer as illustrated [here.](https://getcomposer.org/doc/00-intro.md)
+
 * Pick a name for your module (e.g. "widget").
   The module name MUST be lower case and can't contain underscores. You should check the [CVS contrib](http://cvs.moodle.org/contrib/plugins/mod/) to make sure that your name is not already used by an other module. Registering the plugin name @ [http://moodle.org/plugins](http://moodle.org/plugins) will secure it for you.
 
