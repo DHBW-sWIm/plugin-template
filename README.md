@@ -14,6 +14,8 @@
 
 ## Autofix of all linter Errors
 
+We are using `composer` for dependency paket management. This tool allows to automatically install necessary PHP pakets. It is vital that you follow the installation steps below to get `composer` up and running.
+
 1. Install [Composer](https://getcomposer.org/doc/00-intro.md)
 1. `$ composer install --no-dev`
 1. `$ composer autofix`
@@ -32,14 +34,14 @@ The following steps should get you up and running with this module template code
 
 For the sake of this tutorial, it is assumed that you have a shell (or cmd on Windows) in the directory of this cloned repository. In all following command lines, it is assumed that you are not in any subdirectory. If `/` is used leading a path, it is assumed that this means the directory of this cloned repository and not your systems root directory. 
 
+Code lines beginning with `$` are commands to bre run in a shell like bash. If you do not have a bash shell installed on your system, and also do not have the git bash installed, you need to perform some tasks manually.
+
 * DO NOT PANIC!
 
 * Clone the repository and read this file
 
-* Rename the newmodule/ folder to the name of your module (eg "widget").
-  The module folder MUST be lower case and can't contain underscores. You should check the [CVS contrib](http://cvs.moodle.org/contrib/plugins/mod/) to make sure that
-  your name is not already used by an other module. Registering the plugin
-  name @ [http://moodle.org/plugins](http://moodle.org/plugins) will secure it for you.
+* Pick a name for your module (e.g. "widget").
+  The module name MUST be lower case and can't contain underscores. You should check the [CVS contrib](http://cvs.moodle.org/contrib/plugins/mod/) to make sure that your name is not already used by an other module. Registering the plugin name @ [http://moodle.org/plugins](http://moodle.org/plugins) will secure it for you.
 
   * Keep in mind Moodle does not like numbers or special characters like `.` or `,` in names or paths. Name your plugin accordingly.
 
