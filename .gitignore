@@ -1,3 +1,4 @@
 vendor/
+.vs/
 .php_cs.cache
 *zip
