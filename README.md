@@ -19,6 +19,9 @@
 
 We are using `composer` for dependency paket management. This tool allows to automatically install necessary PHP pakets. It is vital that you follow the installation steps below to get `composer` up and running.
 
+
+1. Install [PHP](https://secure.php.net/manual/de/install.windows.manual.php) 
+Install the Non-Thread-Safe version for your system (most likely x64).
 1. Install [Composer](https://getcomposer.org/doc/00-intro.md)  
 If your system provides a version of composer (like most Linux ditributions), then you can use that version. If you have to install it manually, install it globally to use the shortcut `composer` in your shell. If you install it locally, you need to specify the path to the composer file, as mentioned in the installation docs for composer.
 1. `$ composer install --no-dev`
