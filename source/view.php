@@ -113,7 +113,7 @@ if ($mform->is_cancelled()) {
     error_log("EXECUTION OF TASK RESPONSE");
     $value1 = $fromform->email;
     $value2 = $fromform->name;
-    $result = testmodule_answer_input_required($task_id, $process_definition_id, $value1, $value2);
+    $result = testmodule_answer_input_required($taskid, $process_definition_id, $value1, $value2);
     error_log("INPUT SEND RESULT IS: " . $result);
   }
 } else {
