@@ -26,6 +26,7 @@
         "behat/behat": "^3.4"
     },
     "config": {
+        "vendor-dir": "./source/vendor",
         "platform": {
             "php": "7.0"
         }
