@@ -17,23 +17,20 @@
             "role": "Architect/Developer"
         }
     ],
-    "require": {
-        "trahloff/activiti": "^1.0"
-    }
     "require-dev": {
         "moodlerooms/moodle-coding-standard": "^2.0",
         "phpunit/phpunit": "^6.5",
         "behat/behat": "^3.4"
     },
     "config": {
-        "vendor-dir": "./source/vendor",
         "platform": {
             "php": "7.0"
         }
     },
     "scripts": {
-        "lint": "vendor/bin/phpcs --ignore=vendor --standard=vendor/moodlerooms/moodle-coding-standard/moodle ./source",
-        "autofix": "vendor/bin/phpcbf --ignore=vendor --standard=vendor/moodlerooms/moodle-coding-standard/moodle ./source",
+        "lint": "vendor/bin/phpcs --ignore=vendor,**/lib/ --standard=vendor/moodlerooms/moodle-coding-standard/moodle ./source",
+        "autofix": "vendor/bin/phpcbf --ignore=vendor,**/lib/ --standard=vendor/moodlerooms/moodle-coding-standard/moodle ./source",
+        "build": "composer install --no-dev",
         "unit": "phpunit",
         "behat": "behat",
         "test": [
