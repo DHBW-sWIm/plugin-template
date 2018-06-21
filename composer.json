@@ -17,15 +17,9 @@
             "role": "Architect/Developer"
         }
     ],
-    "repositories": [
-        {
-            "url": "https://github.com/DHBW-sWIm/ActivitiApiDefinition.git",
-            "type": "git"
-        }
-    ],
     "require": {
-        "trahloff/activiti": "dev-master"
-    },
+        "trahloff/activiti": "^1.0"
+    }
     "require-dev": {
         "moodlerooms/moodle-coding-standard": "^2.0",
         "phpunit/phpunit": "^6.5",
