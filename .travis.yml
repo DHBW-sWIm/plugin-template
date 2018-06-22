@@ -1,41 +1,43 @@
+--- 
+addons: 
+  firefox: "47.0.1"
+  postgresql: "9.3"
+before_install: 
+  - "phpenv config-rm xdebug.ini"
+  - "nvm install 8.9"
+  - "nvm use 8.9"
+  - "cd ../.."
+  - "composer create-project -n --no-dev --prefer-dist moodlerooms/moodle-plugin-ci ci ^2"
+  - "export PATH=\"$(cd ci/bin; pwd):$(cd ci/vendor/bin; pwd):$PATH\""
+branches: 
+  only: 
+    - master
+cache: 
+  directories: 
+    - $HOME/.composer/cache
+    - $HOME/.npm
+env: 
+  global: 
+    - MOODLE_BRANCH=MOODLE_32_STABLE
+  matrix: 
+    - DB=pgsql
+install: 
+  - "moodle-plugin-ci install --plugin=${TRAVIS_BUILD_DIR}/source"
 language: php
+php: 
+  - 7.1
+script: 
+  - "moodle-plugin-ci phplint"
+  - "moodle-plugin-ci phpmd"
+  - "moodle-plugin-ci validate"
+  - "moodle-plugin-ci savepoints"
+  - "moodle-plugin-ci grunt"
+  - "moodle-plugin-ci phpunit"
+  - "moodle-plugin-ci behat"
 sudo: false
-branches:
-  only:
-  - master
-addons:
-  firefox: 47.0.1
-  postgresql: '9.3'
-cache:
-  directories:
-  - "$HOME/.composer/cache"
-  - "$HOME/.npm"
-php:
-- 7.1
-env:
-  global:
-  - MOODLE_BRANCH=MOODLE_32_STABLE
-  matrix:
-  - DB=pgsql
-before_install:
-- phpenv config-rm xdebug.ini
-- nvm install 8.9
-- nvm use 8.9
-- cd ../..
-- composer create-project -n --no-dev --prefer-dist moodlerooms/moodle-plugin-ci ci ^2
-- export PATH="$(cd ci/bin; pwd):$(cd ci/vendor/bin; pwd):$PATH"
-install:
-- moodle-plugin-ci install --plugin=${TRAVIS_BUILD_DIR}/source
-script:
-- moodle-plugin-ci phplint
-#- moodle-plugin-ci phpcpd
-- moodle-plugin-ci phpmd
-#- moodle-plugin-ci codechecker
-- moodle-plugin-ci validate
-- moodle-plugin-ci savepoints
-- moodle-plugin-ci grunt
-- moodle-plugin-ci phpunit
-- moodle-plugin-ci behat
- notifications:
-   slack:
-     secure: vJJhULNoaV7QYMSQzAqAXqhTRyByvHo7NzIz/TzhuidbzQHwkpm4R848rto8l8ZlHBQLHj1Ra0qx4TAjacfw9fystEkaK1IuGDAU7HPoxL3SqF2DnsnddDCIHWgCb0smzHF1sq2MCyCM7wPvivimjv0oS2tBkW62Olip6xjt9bbd7CvJNTftEPma5RYJDLEnA+5Ap0ePh5BFEjksj1DGMAi1VPNoqLWK1v9vgBmMzZNFV34GTkc+FGurFRiD3lE8XdE5sXBr0e8zYy+hmTMUVEo2uKZlGffLtHySi3gmXx8rNQkXBKRsG15XvoiFGkiJC4g/iwTO3IVi9z7q09tC8CYz3+V+zUcYBlQMRkPyoIFsXueOP8FMaSyBgxmChHVKproYexrxyMLHzcU5g6IboSXLHcq0HzTGLEDDYYsno2lHENKk00PBvFVCM2D5WWc3zlHTEgxvysaDu2bx4MInE+OP2AlOaA95nq6XLeWrcpf6XNxWipCFa2nECSzuLAM9N7pp2EmyI8c1eG7rHI6dhcxCrYav2C2oMCdzFx3Pqi+OEXay9CJoEwRfKh2BLIRP2NXBqjKXATpWACzSANnuo8TmeXDshBp+dNd2XFZhJmdtKsfjyvTJYJtkjLldms+yVIEnKeCaxdI0K64sO+Hm6NFB60GY2hPoLv+kmQ0YR3Y=
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      - wwi15scb:GL6zGn42jLxtsCd5TAm4M2x6#mdl_ops
