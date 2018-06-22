@@ -1,23 +1,25 @@
 version: "2"         # required to adjust maintainability checks
+exclude_patterns:
+    - "**/lib/"
 checks:
   argument-count:
     config:
-      threshold: 6
+      threshold: 9
   complex-logic:
     config:
-      threshold: 2
+      threshold: 3
   file-lines:
     config:
-      threshold: 250
+      threshold: 350
   method-complexity:
     config:
-      threshold: 5
+      threshold: 6
   method-count:
     config:
-      threshold: 20
+      threshold: 25
   method-lines:
     config:
-      threshold: 50
+      threshold: 80
   nested-control-flow:
     config:
       threshold: 4
