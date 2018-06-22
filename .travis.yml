@@ -19,6 +19,7 @@ cache:
 env: 
   global: 
     - MOODLE_BRANCH=MOODLE_32_STABLE
+    - IGNORE_PATHS=mod/testmodule/lib/
   matrix: 
     - DB=pgsql
 install: 
@@ -38,6 +39,6 @@ sudo: false
 
 notifications:
   email: false
-  slack:
-    rooms:
-      - wwi15scb:GL6zGn42jLxtsCd5TAm4M2x6#mdl_ops
+  #slack:
+   # rooms:
+    #  - wwi15scb:GL6zGn42jLxtsCd5TAm4M2x6#mdl_ops
