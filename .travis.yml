@@ -29,7 +29,7 @@ php:
   - 7.1
 script: 
   - "moodle-plugin-ci phplint"
-  - "moodle-plugin-ci phpmd"
+  #- "moodle-plugin-ci phpmd"
   - "moodle-plugin-ci validate"
   - "moodle-plugin-ci savepoints"
   - "moodle-plugin-ci grunt"
