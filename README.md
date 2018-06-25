@@ -87,7 +87,7 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
   On Linux (and Mac) you can perform this and previous steps by calling:  
   `$ find . -depth -name '*newmodule*' -execdir bash -c 'mv -i "$1" "${1//newmodule/mysupercoolmodname}"' bash {} \;`
 
-  On a Windows system, you can use the following command to perfrom this and the previous step:
+  On a Windows system, you can use the following command to perfrom this and the previous step:  
   `PS> $files = Get-ChildItem . -recurse -include *.* | Where-Object {$_.Name -like "*testmodule*"}; foreach ($file in $files) { $newname = ([String]$file).Replace("testmodule", "mysupercoolmodname"); Rename-Item -Path $file $newname }`
 
 * Implement new functionality in `view.php` and `locallib.php`. In `locallib.php`, most functions are not specific and just require input as a parameter to work with any given process definition.
