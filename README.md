@@ -66,15 +66,15 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
   all the instances of the string "newmodule" to your module name
   (eg "mysupercoolmodname"). If you are using Linux, you can use the following command:  
   `$ find . -type f -exec sed -i 's/testmodule/mysupercoolmodname/g' {} \;`  
-  `$ find . -type f -exec sed -i 's/TESTMODULE/MYSUPERCOOLMODNAME/g' {} \;`
+  `$ find . -type f -exec sed -i 's/TESTMODULE/MYSUPERCOOLMODNAME/g' {} \;`  
 
   On a mac, use:  
   `$ find . -type f -exec sed -i '' 's/testmodule/mysupercoolmodname/g' {} \;`  
-  `$ find . -type f -exec sed -i '' 's/TESTMODULE/MYSUPERCOOLMODNAME/g' {} \;`
+  `$ find . -type f -exec sed -i '' 's/TESTMODULE/MYSUPERCOOLMODNAME/g' {} \;`  
 
   On a Windows system, you can use the following PowerShell commands. Use the command `cd` to change into the directory of your code.  
-  `PS> $files = Get-ChildItem . -recurse -include *.* ; foreach ($file in $files) { (Get-Content $file.PSPath) | ForEach-Object { $_ -replace "testmodule", "mysupercoolmodname" } | Set-Content $file.PSPath }`
-  `PS> $files = Get-ChildItem . -recurse -include *.* ; foreach ($file in $files) { (Get-Content $file.PSPath) | ForEach-Object { $_ -replace "TESTMODULE", "MYSUPERCOOLMODNAME" } | Set-Content $file.PSPath }`
+  `PS> $files = Get-ChildItem . -recurse -include *.* ; foreach ($file in $files) { (Get-Content $file.PSPath) | ForEach-Object { $_ -replace "testmodule", "mysupercoolmodname" } | Set-Content $file.PSPath }`  
+  `PS> $files = Get-ChildItem . -recurse -include *.* ; foreach ($file in $files) { (Get-Content $file.PSPath) | ForEach-Object { $_ -replace "TESTMODULE", "MYSUPERCOOLMODNAME" } | Set-Content $file.PSPath }`  
 
   Replace "mysupercoolmodname" in the commands above with your module name.
 
