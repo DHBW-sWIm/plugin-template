@@ -7,6 +7,8 @@
 - [Moodle Plugin Template](#moodle-plugin-template)
 		- [IF IN DOUBT, READ THE DOCS!](#if-in-doubt-read-the-docs)
 	- [Autofix of all linter Errors](#autofix-of-all-linter-errors)
+			- [!UPDATE!](#update)
+			- [!UPDATE!](#update-1)
 	- [Moodle Instances](#moodle-instances)
 	- [Official Moodle Docs With Additional Comments](#official-moodle-docs-with-additional-comments)
 	- [Local testing](#local-testing)
@@ -16,6 +18,12 @@
 ### IF IN DOUBT, READ THE DOCS!
 
 ## Autofix of all linter Errors
+
+#### !UPDATE!  
+You no longer need to install and run composer, as the necessary libs are now included in the `/source/lib/` folder.  
+You can still install composer, if you like.
+#### !UPDATE!
+
 
 We are using `composer` for dependency paket management. This tool allows to automatically install necessary PHP pakets. It is vital that you follow the installation steps below to get `composer` up and running.
 
@@ -57,23 +65,23 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
 * Edit all the files in this directory and its subdirectories and change
   all the instances of the string "newmodule" to your module name
   (eg "widget"). If you are using Linux, you can use the following command:  
-  `$ find . -type f -exec sed -i 's/newmodule/widget/g' {} \;`  
-  `$ find . -type f -exec sed -i 's/NEWMODULE/WIDGET/g' {} \;`
+  `$ find . -type f -exec sed -i 's/testmodule/widget/g' {} \;`  
+  `$ find . -type f -exec sed -i 's/TESTMODULE/WIDGET/g' {} \;`
 
   On a mac, use:  
-  `$ find . -type f -exec sed -i '' 's/newmodule/widget/g' {} \;`  
-  `$ find . -type f -exec sed -i '' 's/NEWMODULE/WIDGET/g' {} \;`
+  `$ find . -type f -exec sed -i '' 's/testmodule/widget/g' {} \;`  
+  `$ find . -type f -exec sed -i '' 's/TESTMODULE/WIDGET/g' {} \;`
 
-* Rename the file lang/en/newmodule.php to lang/en/widget.php
+  Replace "widget" in the commands above with your module name.
+
+* Rename the file `/source/lang/en/newmodule.php` to lang/en/widget.php
   where "widget" is the name of your module
 
-* Rename all files in backup/moodle2/ folder by replacing "newmodule" with
+* Rename all files in `/source/backup/moodle2/` folder by replacing "newmodule" with
   the name of your module
 
   On Linux you can perform this and previous steps by calling:  
   `$ find . -depth -name '*newmodule*' -execdir bash -c 'mv -i "$1" "${1//newmodule/widget}"' bash {} \;`
-
-* Move the folder `/vendor`, which was created by composer, in the folder `/source`, overwriting any existing files if asked.
 
 * Implement new functionality in `view.php` and `locallib.php`. In `locallib.php`, most functions are not specific and just require input as a parameter to work with any given process definition.
 
