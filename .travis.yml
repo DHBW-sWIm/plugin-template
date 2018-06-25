@@ -19,6 +19,7 @@ cache:
 env: 
   global: 
     - MOODLE_BRANCH=MOODLE_32_STABLE
+    - IGNORE_PATHS=mod/testmodule/lib/**/*
   matrix: 
     - DB=pgsql
 install: 
@@ -28,7 +29,7 @@ php:
   - 7.1
 script: 
   - "moodle-plugin-ci phplint"
-  - "moodle-plugin-ci phpmd"
+  #- "moodle-plugin-ci phpmd"
   - "moodle-plugin-ci validate"
   - "moodle-plugin-ci savepoints"
   - "moodle-plugin-ci grunt"
@@ -38,6 +39,6 @@ sudo: false
 
 notifications:
   email: false
-  slack:
-    rooms:
-      - wwi15scb:GL6zGn42jLxtsCd5TAm4M2x6#mdl_ops
+  #slack:
+   # rooms:
+    #  - wwi15scb:GL6zGn42jLxtsCd5TAm4M2x6#mdl_ops
