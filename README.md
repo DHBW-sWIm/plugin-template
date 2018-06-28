@@ -57,6 +57,10 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
 
 * Install composer as illustrated [here.](https://getcomposer.org/doc/00-intro.md)
 
+* The file `version.php` **does not need to be edited**.  
+  If a module with the same version number is installed, Moodle deletes the old version and installs the newly uploaded module.  
+  **This prevents databse errors and is the preferred way for development.**
+
 * Pick a name for your module (e.g. "mysupercoolmodname").
   The module name MUST be lower case and can't contain underscores. You should check the [CVS contrib](http://cvs.moodle.org/contrib/plugins/mod/) to make sure that your name is not already used by an other module. Registering the plugin name @ [http://moodle.org/plugins](http://moodle.org/plugins) will secure it for you.
 
