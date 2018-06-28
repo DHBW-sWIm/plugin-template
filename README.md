@@ -63,7 +63,7 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
   * Keep in mind Moodle does not like numbers or special characters like `.` or `,` in names or paths. Name your plugin accordingly.
 
 * Edit all the files in this directory and its subdirectories and change
-  all the instances of the string "newmodule" to your module name
+  all the instances of the string "testmodule" to your module name
   (eg "mysupercoolmodname"). If you are using Linux, you can use the following command:  
   `$ find . -type f -exec sed -i 's/testmodule/mysupercoolmodname/g' {} \;`  
   `$ find . -type f -exec sed -i 's/TESTMODULE/MYSUPERCOOLMODNAME/g' {} \;`  
@@ -78,14 +78,14 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
 
   Replace "mysupercoolmodname" in the commands above with your module name.
 
-* Rename the file `/source/lang/en/newmodule.php` to lang/en/mysupercoolmodname.php
+* Rename the file `/source/lang/en/testmodule.php` to lang/en/mysupercoolmodname.php
   where "mysupercoolmodname" is the name of your module
 
-* Rename all files in `/source/backup/moodle2/` folder by replacing "newmodule" with
+* Rename all files in `/source/backup/moodle2/` folder by replacing "testmodule" with
   the name of your module
 
   On Linux (and Mac) you can perform this and previous steps by calling:  
-  `$ find . -depth -name '*newmodule*' -execdir bash -c 'mv -i "$1" "${1//newmodule/mysupercoolmodname}"' bash {} \;`
+  `$ find . -depth -name '*testmodule*' -execdir bash -c 'mv -i "$1" "${1//testmodule/mysupercoolmodname}"' bash {} \;`
 
   On a Windows system, you can use the following command to perfrom this and the previous step:  
   `PS> $files = Get-ChildItem . -recurse -include *.* | Where-Object {$_.Name -like "*testmodule*"}; foreach ($file in $files) { $newname = ([String]$file).Replace("testmodule", "mysupercoolmodname"); Rename-Item -Path $file $newname }`
