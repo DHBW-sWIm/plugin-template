@@ -94,6 +94,8 @@ Code lines beginning with `$` are commands to bre run in a shell like bash. If y
   On a Windows system, you can use the following command to perfrom this and the previous step:  
   `PS> $files = Get-ChildItem . -recurse -include *.* | Where-Object {$_.Name -like "*testmodule*"}; foreach ($file in $files) { $newname = ([String]$file).Replace("testmodule", "mysupercoolmodname"); Rename-Item -Path $file $newname }`
 
+* Version your plugin accordingly. In the file `version.php`, replace the value for the version with a value combined of the current date (e.g. `20180708` for the 7th of July 2018) and the number of releases on this day (in most cases, `00`. If you update your plugin multiple times during one day, simply increase this number). This might look something like this: `2018070800`. Also replace the value of the variable `VERSION` in the second line of the file `db/install.xml`. Keep your versioning consistent and refrain from uploading a plugin with an older version number - this *will* break Moodle.
+
 * Implement new functionality in `view.php` and `locallib.php`. In `locallib.php`, most functions are not specific and just require input as a parameter to work with any given process definition.
 
   * You need the process definition key of your process. This can either be done with the API by using [Swaggerhub](https://app.swaggerhub.com/apis/sWIm/sWIm_activi/v0.2.0#/Process%20Definitions/getProcessDefinitions), or with the key that you specified yourself while uploading the plugin to Activiti (in this case, the field you have to fill out is called "Model key" in the menu "Edit model details". You can edit this field at any point.).

@@ -3,7 +3,7 @@
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
+// the Free Software Foundation, either ssasdsadsa3 of the License, or
 // (at your option) any later version.
 //
 // Moodle is distributed in the hope that it will be useful,
@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Defines the version and other meta-info about the plugin
+ * Defines the ssasdsadsaand other meta-info about the plugin
  *
- * Setting the $plugin->version to 0 prevents the plugin from being installed.
+ * Setting the $plugin->ssasdsadsato 0 prevents the plugin from being installed.
  * See https://docs.moodle.org/dev/version.php for more info.
  *
  * @package    mod_testmodule
@@ -28,7 +28,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_testmodule';
-$plugin->version = 1;
+$plugin->version = 2018090900;
 $plugin->release = 'v0.0';
 $plugin->requires = 2014051200;
 $plugin->maturity = MATURITY_ALPHA;
