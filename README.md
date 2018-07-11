@@ -22,6 +22,8 @@
 #### !UPDATE!  
 You no longer need to install and run composer, as the necessary libs are now included in the `/source/lib/` folder.  
 You can still install composer, if you like.
+
+Also, since our build pipeline tests automatically, **you no longer need to install PHP on your system**.
 #### !UPDATE!
 
 
@@ -49,17 +51,12 @@ The following steps should get you up and running with this module template code
 
 For the sake of this tutorial, it is assumed that you have a shell (or cmd on Windows) in the directory of this cloned repository. In all following command lines, it is assumed that you are not in any subdirectory. If `/` is used leading a path, it is assumed that this means the directory of this cloned repository and not your systems root directory. 
 
-Code lines beginning with `$` are commands to bre run in a shell like bash. If you do not have a bash shell installed on your system, and also do not have the git bash installed, you need to perform some tasks manually.
+Code lines beginning with `$` are commands to be run in a shell like bash. If you do not have a bash shell installed on your system, and also do not have the git bash installed, you need to perform some tasks manually.  
+Code lines beginning with `PS>` are to be run in the Windows Powershell.
 
 * DO NOT PANIC!
 
 * Clone the repository and read this file
-
-* Install composer as illustrated [here.](https://getcomposer.org/doc/00-intro.md)
-
-* The file `version.php` **does not need to be edited**.  
-  If a module with the same version number is installed, Moodle deletes the old version and installs the newly uploaded module.  
-  **This prevents databse errors and is the preferred way for development.**
 
 * Pick a name for your module (e.g. "mysupercoolmodname").
   The module name MUST be lower case and can't contain underscores. You should check the [CVS contrib](http://cvs.moodle.org/contrib/plugins/mod/) to make sure that your name is not already used by an other module. Registering the plugin name @ [http://moodle.org/plugins](http://moodle.org/plugins) will secure it for you.
